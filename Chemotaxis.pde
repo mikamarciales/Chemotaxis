@@ -1,18 +1,25 @@
-Bacteria bob = new Bacteria();
+Bacteria [] colony;
 
  void setup()   
  {     
  	size(600, 600);
  	background(0);
- 	//initialize bacteria variables here   
+ 	colony = new Bacteria[100]; 
+ 	for(int i = 0; i < colony.length; i++)
+ 	{
+ 		colony[i]= new Bacteria();
+ 	}
  }
 
  void draw()   
  {    
- 	fill(0, 0, 0, 50);
+ 	fill(0, 0, 0, 10);
  	rect(-5, -5, 605, 605);
- 	bob.move();
- 	bob.show();
+ 	for(int i = 0; i < colony.length; i++)
+ 	{
+ 		colony[i].move();
+ 		colony[i].show();
+ 	}
  }  
 
  class Bacteria    
@@ -22,7 +29,7 @@ Bacteria bob = new Bacteria();
  	{
  		myX = 300;
  		myY = 300;
- 		myColor = 255;
+ 		//myColor = (int)(Math.random()*256);
  	}
 
  	void move()
@@ -33,9 +40,10 @@ Bacteria bob = new Bacteria();
 
  	void show()
  	{
+ 		int mySize = 10;
  		noStroke();
- 		fill(myColor);
- 		ellipse(myX, myY, 50, 50);
+ 		fill((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256), 100);
+ 		ellipse(myX, myY, mySize, mySize);
  	}
 
  }    
