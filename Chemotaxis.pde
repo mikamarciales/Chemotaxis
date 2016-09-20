@@ -2,9 +2,9 @@ Bacteria [] colony;
 
  void setup()   
  {     
- 	size(800, 800);
+ 	size(1000, 800);
  	background(0);
- 	colony = new Bacteria[20]; 
+ 	colony = new Bacteria[100]; 
  	for(int i = 0; i < colony.length; i++)
  	{
  		colony[i]= new Bacteria();
@@ -15,7 +15,7 @@ Bacteria [] colony;
  void draw()   
  {    
  	fill(0, 0, 0, 25);
- 	rect(-5, -5, 805, 805);
+ 	rect(-5, -5, 1005, 805);
  	for(int i = 0; i < colony.length; i++)
  	{
  		colony[i].move();
@@ -28,8 +28,9 @@ Bacteria [] colony;
  	int myX, myY, myColor;
  	Bacteria()
  	{
- 		myX = (int)(Math.random()*801);
- 		myY = (int)(Math.random()*801);
+ 		myX = (int)(Math.random()*1001);
+ 		//myY = (int)(Math.random()*801);
+ 		myY = 400;
  		myColor = color((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
  	}
 
