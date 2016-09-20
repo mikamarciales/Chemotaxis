@@ -2,20 +2,20 @@ Bacteria [] colony;
 
  void setup()   
  {     
- 	size(600, 600);
+ 	size(800, 800);
  	background(0);
- 	colony = new Bacteria[20]; 
+ 	colony = new Bacteria[100]; 
  	for(int i = 0; i < colony.length; i++)
  	{
  		colony[i]= new Bacteria();
  	}
- 	frameRate(20);
+ 	frameRate(10);
  }
 
  void draw()   
  {    
  	fill(0, 0, 0, 25);
- 	rect(-5, -5, 605, 605);
+ 	rect(-5, -5, 805, 805);
  	for(int i = 0; i < colony.length; i++)
  	{
  		colony[i].move();
@@ -28,8 +28,8 @@ Bacteria [] colony;
  	int myX, myY, myColor;
  	Bacteria()
  	{
- 		myX = 300;
- 		myY = 300;
+ 		myX = 400;
+ 		myY = 400;
  		myColor = color((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
  	}
 
@@ -40,25 +40,25 @@ Bacteria [] colony;
     	int direction = (int)(Math.random()*4);
 			if(direction == 0)
 			{
-				myX += 20; //right
+				myX += 10; //right
 			}
 			else if(direction == 1)
 			{
-				myX -= 20; //left
+				myX -= 10; //left
 			}
 			else if(direction == 2)
 			{
-				myY += 20; //down
+				myY += 10; //down
 			}
 			else // direction must be 3
 			{
-				myY -= 20; //up
+				myY -= 10; //up
 			}
  	}
 
  	void show()
  	{
- 		int mySize = 10;
+ 		int mySize = 5;
  		noStroke();
  		fill(myColor);
  		ellipse(myX, myY, mySize, mySize);
