@@ -55,6 +55,22 @@ Bacteria [] colony;
 			{
 				myY -= 15; //up
 			}
+			if(myX < 0)
+			{
+				myX += 15; //right
+			}
+			if(myX > 1000)
+			{
+				myX -= 15; //left
+			}
+			if(myY < 0)
+			{
+				myY += 15; //down
+			}
+			if(myY > 800)
+			{
+				myY -= 15; //up
+			}
  	}
 
  	void show()
