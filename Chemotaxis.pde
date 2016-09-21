@@ -56,6 +56,22 @@ Bacteria [] colony;
 			{
 				myY -= 17; //up
 			}
+			if(mouseX < myX && mouseX > myX-50)
+			{
+				myX += 17; //right
+			}
+			else if(mouseX > myX && mouseX < myX+50)
+			{
+				myX -= 17; //left
+			}
+			else if(mouseY > myY && mouseY < myY+50)
+			{
+				myY += 17; //down
+			}
+			else if(mouseY < myY && mouseY > myY-50)
+			{
+				myY -= 17; //up
+			}
  	}
 
  	void show()
