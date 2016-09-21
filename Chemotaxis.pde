@@ -39,45 +39,30 @@ Bacteria [] colony;
  		//myX = myX + (int)((Math.random()*10)-5);
     	//myY = myY + (int)((Math.random()*10)-5);
     	int direction = (int)(Math.random()*4);
-			if(direction == 0 && mouseX < 400)
+			if(direction == 0 || myX < 0)
 			{
-				myX += 15; //right
+				myX += 17; //right
 			}
-			else if(direction == 1 && mouseX > 400)
+			else if(direction == 1 || myX > 1000)
 			{
-				myX -= 15; //left
+				myX -= 17; //left
 			}
-			else if(direction == 2 && mouseY < 400)
+			else if(direction == 2 || myY < 0)
 			{
-				myY += 15; //down
+				myY += 17; //down
 			}
-			else if(direction == 3 && mouseY > 400)
+			else if(direction == 3 || myY > 800)
 			{
-				myY -= 15; //up
-			}
-			if(myX < 0)
-			{
-				myX += 15; //right
-			}
-			if(myX > 1000)
-			{
-				myX -= 15; //left
-			}
-			if(myY < 0)
-			{
-				myY += 15; //down
-			}
-			if(myY > 800)
-			{
-				myY -= 15; //up
+				myY -= 17; //up
 			}
  	}
 
  	void show()
  	{
  		int mySize = 10;
- 		noStroke();
- 		fill(myColor);
+ 		stroke(myColor);
+ 		strokeWeight(3);
+ 		fill(0);
  		ellipse(myX, myY, mySize, mySize);
  	}
 
