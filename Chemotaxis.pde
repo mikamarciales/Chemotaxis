@@ -15,6 +15,7 @@ Bacteria [] colony;
  void draw()   
  {    
  	fill(0, 0, 0, 25);
+ 	noStroke();
  	rect(-5, -5, 1005, 805);
  	for(int i = 0; i < colony.length; i++)
  	{
