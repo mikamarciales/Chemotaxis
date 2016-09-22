@@ -9,7 +9,6 @@ Bacteria [] colony;
  	{
  		colony[i]= new Bacteria();
  	}
- 	frameRate(30);
  }
 
  void draw()   
