@@ -81,10 +81,4 @@ Bacteria [] colony;
  		fill(0);
  		ellipse(myX, myY, mySize, mySize);
  	}
-
- 	void mousePressed()
- 	{
-
- 	}
-
  }    
